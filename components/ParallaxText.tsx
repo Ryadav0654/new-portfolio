@@ -1,4 +1,5 @@
 import { useRef } from "react";
+
 import {
   motion,
   useScroll,
@@ -11,11 +12,10 @@ import {
 import { wrap } from "motion/react";
 
 interface ParallaxProps {
-  children: React.ReactNode;
   baseVelocity: number;
 }
 
-export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
+export function ParallaxText({ baseVelocity = 100 }: ParallaxProps) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -61,13 +61,34 @@ export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    * dynamically generated number of children.
    */
   return (
-    <div className="parallax">
-      <motion.div className="scroller" style={{ x }}>
-        <span>{children} </span>
-        {/* <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span> */}
-      </motion.div>
-    </div>
+    <div className="w-full overflow-hidden tracking-tighter leading-[0.8] m-0 whitespace-nowrap flex flex-nowrap">
+    <motion.div
+      className="w-full font-semibold uppercase text-[4rem] flex whitespace-nowrap flex-nowrap text-white"
+      style={{ x }}
+    >
+      <span className="block font-extrabold mr-[30px">React.JS</span>
+      <span className="block font-extrabold mr-[30px] ">Next.JS</span>
+      <span className="block font-extrabold mr-[30px]">Node.JS</span>
+      <span className="block font-extrabold mr-[30px]">Node.JS</span>
+      <span className="block font-extrabold mr-[30px]">Node.JS</span>
+      <span className="block font-extrabold mr-[30px]">Express JS</span>
+      <span className="block font-extrabold mr-[30px]">Html</span>
+      <span className="block font-extrabold mr-[30px]">CSS</span>
+    </motion.div>
+    <motion.div
+      className="w-full font-semibold uppercase text-[4rem] flex whitespace-nowrap flex-nowrap text-white"
+      style={{ x }}
+    >
+      <span className="block font-extrabold mr-[30px">React.JS</span>
+      <span className="block font-extrabold mr-[30px] ">Next.JS</span>
+      <span className="block font-extrabold mr-[30px]">Node.JS</span>
+      <span className="block font-extrabold mr-[30px]">Node.JS</span>
+      <span className="block font-extrabold mr-[30px]">Node.JS</span>
+      <span className="block font-extrabold mr-[30px]">Express JS</span>
+      <span className="block font-extrabold mr-[30px]">Html</span>
+      <span className="block font-extrabold mr-[30px]">CSS</span>
+    </motion.div>
+  </div>
+  
   );
 }

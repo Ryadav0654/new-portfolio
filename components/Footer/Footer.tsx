@@ -5,18 +5,18 @@ import SocialLinks from "../SocialLinks";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#042121] text-white py-8">
+    <footer className="bg-gray-800 backdrop-blur-md text-white py-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-32">
         <div className="flex flex-col sm:flex-row justify-between items-center">
           {/* Logo or Branding */}
           <div className="mb-4 sm:mb-0">
-            <Link href="/" className="text-xl font-extrabold hover:text-gray-300">
+            <Link href="/" className="text-2xl font-[800] hover:text-gray-300">
               Ravindra Yadav
             </Link>
           </div>
 
           {/* Navigation Links */}
-          <div className="flex space-x-6 mb-4 sm:mb-0">
+          <div className="flex md:space-x-6 space-x-4 mb-4 sm:mb-0">
             {navLinks.map((link) => (
               <Link
                 key={link.name}

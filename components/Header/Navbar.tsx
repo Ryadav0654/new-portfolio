@@ -23,7 +23,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/">
-              <span className="text-xl font-extrabold">Ravindra Yadav</span>
+              <span className="text-xl font-extrabold">Ravindra</span>
             </Link>
           </div>
 
@@ -64,7 +64,8 @@ const Navbar = () => {
             }
             <Link
                 href={"#"}
-                className="hidden px-3 py-1 transition-color text-lg font-semibold  bg-blue-500  lg:flex hover:bg-blue-600 text-white rounded-full transition duration-300"
+                style={{backgroundImage: "linear-gradient(90deg, #0072ff 0%, #00d4ff 100%"}}
+                className="hidden px-3 py-1 transition-color text-lg font-semibol  lg:flex text-white rounded-full transition duration-300"
               >
                 Hire Me
               </Link>

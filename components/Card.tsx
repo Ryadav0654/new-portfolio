@@ -29,6 +29,10 @@ const Card = ({
     >
       <div className="overflow-hidden w-full h-full">
         <motion.img
+          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ x: 100, opacity: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           src={imageUrl}
           alt={title}
           className="w-full h-full object-cover"
@@ -44,10 +48,21 @@ const Card = ({
         >
           {title}
         </motion.h1>
-        <p className="text-lg line-clamp-3 mb-3 md:line-clamp-none font-semibold text-white text-justify py-3 lg:py-8">
+        <motion.p
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 200 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
+        
+        className="text-lg line-clamp-3 mb-3 md:line-clamp-none font-semibold text-white text-justify py-3 lg:py-8">
           {description}
-        </p>
-        <div className="grid grid-cols-2 grid-center gap-4 lg:gap-24 text-center w-full">
+        </motion.p>
+        <motion.div
+        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 200 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="grid grid-cols-2 grid-center gap-4 lg:gap-24 text-center w-full">
           <Link
             href={link}
             style={{backgroundImage: "linear-gradient(90deg, #0072ff 0%, #00d4ff 100%"}}
@@ -66,7 +81,7 @@ const Card = ({
           >
             Live Demo
           </Link>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );

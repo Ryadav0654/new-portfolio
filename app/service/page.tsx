@@ -63,6 +63,7 @@ const Service: React.FC = () => {
       className="w-full h-screen flex justify-center items-center relative bg-opacity-75 "
     >
       {/* Scrollable Card Container */}
+      <div className='bg-black bg-opacity-35 w-full h-full flex justify-center items-center'>
       <div
         ref={scrollRef}
         className="w-[85vw] h-full px-10 flex gap-x-10 overflow-x-scroll scroll-smooth snap-x scrollbar-none"
@@ -87,6 +88,7 @@ const Service: React.FC = () => {
       >
         ▶
       </button>
+      </div>
     </section>
   );
 };

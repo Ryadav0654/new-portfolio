@@ -1,7 +1,6 @@
 "use client";
-import Image from "next/image";
 import SocialLinks from "@/components/SocialLinks";
-import img from "@/public/resister-bg.png";
+import { TypeAnimation } from 'react-type-animation';
 import Link from "next/link";
 import About from "./about/page";
 import Skill from "./skills/page";
@@ -47,32 +46,50 @@ export default function Home() {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              <h1 className="text-7xl font-[900] mb-4">
-                Welcome to My Portfolio
+              <h1 className="text-6xl lg:text-[6rem] font-[900] mb-4 lg:mb-1">Hey there,</h1>
+              <h1 className="text-5xl lg:text-[6rem] font-[900]  mb-4 lg:mb-1">
+                I'm <span className="text-blue-500" >
+                <TypeAnimation
+                  sequence={[
+                    // Same substring at the start will only be typed out once, initially
+                    "Ravindra Yadav",
+                    3000, // wait 1s before replacing "Mice" with "Hamsters"
+                    // "a Web Developer",
+                    // 3000,
+                    // "a Coder",
+                    // 3000,
+                  ]}
+                  wrapper="span"
+                  speed={10}
+                  deletionSpeed={20}
+                  style={{  display: "inline-block" }}
+                  repeat={Infinity}
+                />
+                </span>
               </h1>
-              <p className="text-2xl font-semibold">
+              <p className="text-lg lg:text-2xl font-bold">
                 Discover my work, projects, and journey as a developer.
               </p>
-            
-            <div className="flex justify-center space-x-8 mt-8">
-            
-              <Link
-                href={"#"}
-                className="px-4 py-2 transition-color duration-300 font-semibold bg-blue-500 hover:bg-blue-600 hover:scale-110 text-white rounded-full  transition  shadow-md shadow-blue-300"
-              >
-                Download Resume
-              </Link>
-              <Link
-                href={"#"}
-                className="px-4 py-2 transition-color  font-semibold  bg-blue-500 hover:bg-blue-600 hover:scale-110 text-white rounded-full transition duration-300 shadow-md shadow-blue-300"
-              >
-                Hire Me
-              </Link>
-             
-            </div>
-            <div className="flex justify-center space-x-4 lg:space-x-8 mt-10">
-              <SocialLinks />
-            </div>
+
+              <div className="flex justify-center space-x-8 mt-8">
+                <Link
+                  href={"#"}
+                  style={{backgroundImage: "linear-gradient(90deg, #0072ff 0%, #00d4ff 100%"}}
+                  className="px-4 py-2 transition-color duration-300 font-semibold hover:scale-110 text-white rounded-full  transition  shadow-md shadow-blue-300"
+                >
+                  Download Resume
+                </Link>
+                <Link
+                  href={"#"}
+                  style={{backgroundImage: "linear-gradient(90deg, #0072ff 0%, #00d4ff 100%"}}
+                  className="px-4 py-2 transition-color  font-semibold  hover:scale-110 text-white rounded-full transition duration-300 shadow-md shadow-blue-300"
+                >
+                  Hire Me
+                </Link>
+              </div>
+              <div className="flex justify-center space-x-4 lg:space-x-8 mt-10">
+                <SocialLinks />
+              </div>
             </motion.div>
           </div>
         </div>

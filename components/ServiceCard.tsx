@@ -28,7 +28,7 @@ const ServiceCard = ({
         transition: { duration: 0.3, ease: "easeInOut" },
       }}
       key={id}
-      className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-[80vw] border border-gray-700 rounded-3xl backdrop-blur-sm bg-gray-600/10 bg-clip-padding overflow-hidden h-[60vh] shadow-lg shadow-gray-500 "
+      className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-[80vw] border border-gray-700 rounded-3xl backdrop-blur-sm bg-gray-500/10 bg-clip-padding overflow-hidden h-[60vh] shadow-lg shadow-gray-500 "
     >
       <div className="overflow-hidden w-full h-full">
         <motion.img
@@ -47,9 +47,14 @@ const ServiceCard = ({
         >
           {title}
         </motion.h1>
-        <p className="text-lg font-semibold text-white text-justify py-4 lg:py-8">
+        <motion.p 
+        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 200 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-lg font-semibold text-white text-justify py-4 lg:py-8">
           {description}
-        </p>
+        </motion.p>
 
         <Link
           href={link}
