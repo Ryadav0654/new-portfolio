@@ -16,6 +16,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'pikbest.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'png.pngtree.com',
+      },
     ],
   },
 };

@@ -135,7 +135,7 @@ const SkillPage: React.FC = () => {
     <section
       style={{
         backgroundImage:
-          'url("https://img.pikbest.com/wp/202346/minimal-abstract-blue-background-in-classic-style-3d-rendered-and-empty_9623588.jpg!bw700")',
+          'url("https://png.pngtree.com/thumb_back/fh260/background/20201022/pngtree-abstract-technology-background-line-high-tech-electricity-image_430309.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
