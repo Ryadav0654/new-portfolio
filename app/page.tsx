@@ -1,6 +1,6 @@
 "use client";
 import SocialLinks from "@/components/SocialLinks";
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from "react-type-animation";
 import Link from "next/link";
 import About from "./about/page";
 import Skill from "./skills/page";
@@ -8,7 +8,6 @@ import Contact from "./contact/page";
 import Project from "./projects/page";
 import Service from "./service/page";
 import { motion, useScroll } from "motion/react";
-// import bgVideoUrl from "../public/bg_video.mp4"
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -17,7 +16,7 @@ export default function Home() {
     <>
       <motion.div
         style={{ scaleX: scrollYProgress }}
-        className="fixed top-0 left-0 right-0 h-2 bg-blue-500 origin-left z-50 "
+        className="fixed top-0 left-0 right-0 h-2 bg-blue-500 origin-left z-50"
       />
       <div className="relative w-full h-screen">
         {/* Video Background */}
@@ -40,25 +39,28 @@ export default function Home() {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              <h1 className="text-6xl lg:text-[6rem] font-[900] mb-4 lg:mb-1">Hey there,</h1>
+              <h1 className="text-6xl lg:text-[6rem] font-[900] mb-4 lg:mb-1">
+                Hey there,
+              </h1>
               <h1 className="text-5xl lg:text-[6rem] font-[900]  mb-4 lg:mb-1">
-                I'm <span className="text-blue-500 " >
-                <TypeAnimation
-                  sequence={[
-                    // Same substring at the start will only be typed out once, initially
-                    "Ravindra Yadav",
-                    3000, // wait 1s before replacing "Mice" with "Hamsters"
-                    // "a Web Developer",
-                    // 3000,
-                    // "a Coder",
-                    // 3000,
-                  ]}
-                  wrapper="span"
-                  speed={10}
-                  deletionSpeed={20}
-                  style={{  display: "inline-block" }}
-                  repeat={Infinity}
-                />
+                I&apos;m{" "}
+                <span className="text-blue-500">
+                  <TypeAnimation
+                    sequence={[
+                      // Same substring at the start will only be typed out once, initially
+                      "Ravindra Yadav",
+                      3000, // wait 1s before replacing "Mice" with "Hamsters"
+                      // "a Web Developer",
+                      // 3000,
+                      // "a Coder",
+                      // 3000,
+                    ]}
+                    wrapper="span"
+                    speed={10}
+                    deletionSpeed={20}
+                    style={{ display: "inline-block" }}
+                    repeat={Infinity}
+                  />
                 </span>
               </h1>
               <p className="text-lg lg:text-2xl font-bold">
@@ -67,8 +69,13 @@ export default function Home() {
 
               <div className="flex justify-center space-x-8 mt-8">
                 <Link
-                  href={"https://drive.google.com/file/d/1tlzOa4hm7lF7Or0wb8Sj1Q7EVs_Mk9Fr/view?usp=sharing"}
-                  style={{backgroundImage: "linear-gradient(90deg, #0072ff 0%, #00d4ff 100%"}}
+                  href={
+                    "https://drive.google.com/file/d/1tlzOa4hm7lF7Or0wb8Sj1Q7EVs_Mk9Fr/view?usp=sharing"
+                  }
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #0072ff 0%, #00d4ff 100%",
+                  }}
                   className="px-4 py-2 transition-color duration-300 font-semibold hover:scale-110 text-white rounded-full  transition  shadow-md shadow-blue-300"
                   target="_blank"
                 >
@@ -76,7 +83,10 @@ export default function Home() {
                 </Link>
                 <Link
                   href={"https://www.linkedin.com/in/yadavravindra536/"}
-                  style={{backgroundImage: "linear-gradient(90deg, #0072ff 0%, #00d4ff 100%"}}
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, #0072ff 0%, #00d4ff 100%",
+                  }}
                   className="px-4 py-2 transition-color  font-semibold  hover:scale-110 text-white rounded-full transition duration-300 shadow-md shadow-blue-300"
                   target="_blank"
                 >

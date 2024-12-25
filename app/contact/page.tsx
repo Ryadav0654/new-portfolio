@@ -1,7 +1,7 @@
 "use client";
 import Input from "@/components/Input";
 import React from "react";
-import { useForm, SubmitHandler, Field } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 interface IFormInput {

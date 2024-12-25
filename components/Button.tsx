@@ -6,7 +6,7 @@ const Button = ({
     className="",
     onclick
 }: Readonly<{
-    btnText?:String
+    btnText?:string
     className?: string,
     onclick?: () => void
 }>)  => {

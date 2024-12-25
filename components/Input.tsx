@@ -12,7 +12,7 @@ const Input = ({
   type: string;
   className?: string;
   labelName?: string;
-  onchange?: any;
+  onchange?: () => void;
   placeholder?: string;
   id:string;
 }) => {

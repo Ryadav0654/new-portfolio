@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 const Card = ({
