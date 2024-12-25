@@ -17,13 +17,13 @@ const Navbar = () => {
   }
 
   return (
-    <nav className=" fixed top-0 left-0 right-0 bg-transparent opacity-1 text-white z-50 backdrop-blur-m">
+    <nav className=" fixed top-0 left-0 right-0 bg-transparent opacity-1 text-white z-50 backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 sticky top-0 ">
-        <div className="flex justify-between items-center py-6">
+        <div className="flex justify-between items-center py-5">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/">
-              <span className="text-xl font-extrabold">Ravindra</span>
+              <span className="text-xl lg:text-2xl font-extrabold">Ravindra</span>
             </Link>
           </div>
 
@@ -58,12 +58,12 @@ const Navbar = () => {
             {
                 navLinks.map((link) => (
                     <Link key={link.name} href={link.path}>
-                        <span className="hover:bg-gray-700 px-3 py-2 rounded-full text-lg font-semibold ">{link.name}</span>
+                        <span className="hover:bg-gradient-to-l hover:from-cyan-500 hover:to-blue-500 px-3 py-2 rounded-full text-lg font-semibold ">{link.name}</span>
                     </Link>
                 ))
             }
             <Link
-                href={"#"}
+                href={"https://www.linkedin.com/in/yadavravindra536"}
                 style={{backgroundImage: "linear-gradient(90deg, #0072ff 0%, #00d4ff 100%"}}
                 className="hidden px-3 py-1 transition-color text-lg font-semibol  lg:flex text-white rounded-full transition duration-300"
               >
@@ -85,7 +85,7 @@ const Navbar = () => {
                     variants={list}
                     key={link.name}>
                     <Link key={link.name} href={link.path} >
-                        <motion.li variants={item} onClick={() => setIsOpen(false)}   className="block hover:bg-gray-700 px-3 py-2 text-center rounded-full text-lg font-semibold">{link.name}</motion.li>
+                        <motion.li variants={item} onClick={() => setIsOpen(false)}   className="block hover:bg-gray-700 px-3 py-2 text-center rounded-full text-lg font-bold">{link.name}</motion.li>
                     </Link>
                   </motion.ul>
                 ))

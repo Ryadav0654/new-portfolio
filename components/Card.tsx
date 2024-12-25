@@ -8,13 +8,15 @@ const Card = ({
   title,
   description,
   imageUrl,
-  link,
+  codelink,
+  demolink,
 }: {
   id: number;
   title: string;
   description: string;
   imageUrl: string;
-  link: string;
+  codelink: string;
+  demolink: string;
 }) => {
   return (
     
@@ -35,7 +37,7 @@ const Card = ({
           viewport={{ once: true }}
           src={imageUrl}
           alt={title}
-          className="w-full h-full object-cover"
+          className="h-full object-cover object-center "
         />
       </div>
       <div className="px-6 py-3 lg:p-14 flex flex-col justify-center items-center">
@@ -64,7 +66,7 @@ const Card = ({
         viewport={{ once: true, amount: 0.3 }}
         className="grid grid-cols-2 grid-center gap-4 lg:gap-24 text-center w-full">
           <Link
-            href={link}
+            href={codelink}
             style={{backgroundImage: "linear-gradient(90deg, #0072ff 0%, #00d4ff 100%"}}
             className="col-span-2 lg:col-span-1  py-3 transition-color duration-300 font-bold hover:scale-110 text-white lg:text-lg rounded-full transition  shadow-md shadow-gray-500"
             target="_blank"
@@ -73,7 +75,7 @@ const Card = ({
             View Code
           </Link>
           <Link
-            href={link}
+            href={demolink}
             style={{backgroundImage: "linear-gradient(90deg, #0072ff 0%, #00d4ff 100%"}}
             className="col-span-2 lg:col-span-1 lg:text-lg py-3 transition-color duration-300 font-bold hover:scale-110 text-white rounded-full  transition  shadow-md shadow-gray-500"
             target="_blank"

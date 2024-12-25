@@ -5,7 +5,7 @@ const SocialLinks = () => {
     <>
             {/* Twitter */}
             <Link
-              href="https://twitter.com"
+              href="https://x.com/ravindra_y0654/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-300 hover:scale-150 transition duration-300 ease-in-out"
@@ -22,7 +22,7 @@ const SocialLinks = () => {
 
             {/* GitHub */}
             <Link
-              href="https://github.com"
+              href="https://github.com/Ryadav0654/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-300 hover:scale-150 transition duration-300 ease-in-out"
@@ -39,7 +39,7 @@ const SocialLinks = () => {
 
             {/* LinkedIn */}
             <Link
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/yadavravindra536/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-300 hover:scale-150 transition duration-300 ease-in-out"
@@ -56,7 +56,7 @@ const SocialLinks = () => {
 
             {/* Discord */}
             <Link
-              href="https://discord.com"
+              href="https://discord.gg/vNrYWjwD"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-300 hover:scale-150 transition duration-300 ease-in-out"

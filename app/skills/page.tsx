@@ -1,4 +1,4 @@
-import SkillPage from "@/components/SkillTest";
+import SkillPage from "@/components/SkillPage";
 import React from "react";
 
 const Skill = () => {

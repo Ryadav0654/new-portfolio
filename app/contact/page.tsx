@@ -25,7 +25,7 @@ const Contact = () => {
     <section
       style={{
         backgroundImage:
-          'url("https://img.pikbest.com/wp/202346/ui-ux-design-abstract-geometric-background-featuring-3d-rendered-squares-and-cylinders-for-web-social-media_9627452.jpg!sw800")',
+          'url("contact_bg.jpg")',
         backgroundSize: "cover",
       }}
       className="min-h-screen w-full flex items-center justify-center bg-opacity-50 relative"
@@ -38,7 +38,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 200 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="lg:w-1/2 mb-10 lg:mb-0 hidden lg:block">
+          className="lg:w-1/2 mb-10 lg:mb-0 ">
             <h1 className="text-4xl font-extrabold text-center lg:text-left text-white/90 mb-6">
               <TypeAnimation
                 sequence={[
