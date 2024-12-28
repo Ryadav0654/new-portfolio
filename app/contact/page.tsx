@@ -48,7 +48,7 @@ const Contact = () => {
         toast.success("🎉 message sent successfully!");
         // toast.success("🎉 Thanks for contacting me!");
       }
-    } catch (error: any) {
+    } catch (error) {
       toast.error("🚨" + error.message);
       console.log("error occur to submit form", error);
     }
