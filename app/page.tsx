@@ -8,12 +8,14 @@ import Contact from "./contact/page";
 import Project from "./projects/page";
 import Service from "./service/page";
 import { motion, useScroll } from "motion/react";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
 
   return (
     <>
+      <Toaster position="top-right" reverseOrder={false} />
       <motion.div
         style={{ scaleX: scrollYProgress }}
         className="fixed top-0 left-0 right-0 h-2 bg-blue-500 origin-left z-50"
@@ -50,10 +52,10 @@ export default function Home() {
                       // Same substring at the start will only be typed out once, initially
                       "Ravindra Yadav",
                       3000, // wait 1s before replacing "Mice" with "Hamsters"
-                      // "a Web Developer",
-                      // 3000,
-                      // "a Coder",
-                      // 3000,
+                      "a Web Developer",
+                      3000,
+                      "a Coder",
+                      3000,
                     ]}
                     wrapper="span"
                     speed={10}

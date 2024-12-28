@@ -4,6 +4,9 @@ import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import axios from "axios";
+import { Email_url } from "@/utils/constant";
+import toast from "react-hot-toast";
 interface IFormInput {
   name: string;
   email: string;
@@ -13,19 +16,48 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<IFormInput>();
 
-  // Handle form submission
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    console.log(data); // Handle form submission (e.g., send email or API request)
+  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+    const { email, name, message } = data;
+    const service_id = process.env.NEXT_PUBLIC_SERVICE_ID;
+    const template_id = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+    const user_id = process.env.NEXT_PUBLIC_USER_ID;
+    reset();
+    try {
+      const res = await axios.post(
+        Email_url,
+        {
+          email,
+          name,
+          message,
+          service_id,
+          template_id,
+          user_id,
+        },
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      // console.log("form response", res);
+      if(res.data === "OK"){
+        toast.success("🎉 message sent successfully!");
+        // toast.success("🎉 Thanks for contacting me!");
+      }
+    } catch (error: any) {
+      toast.error("🚨" + error.message);
+      console.log("error occur to submit form", error);
+    }
   };
 
   return (
     <section
       style={{
-        backgroundImage:
-          'url("contact_bg.jpg")',
+        backgroundImage: 'url("contact_bg.jpg")',
         backgroundSize: "cover",
       }}
       className="min-h-screen w-full flex items-center justify-center bg-opacity-50 relative"
@@ -33,12 +65,13 @@ const Contact = () => {
       <div className="min-h-screen w-full  bg-black bg-opacity-35 ">
         <div className="w-full mx-auto flex flex-col lg:flex-row items-center justify-between absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-4 md:px-10 xl:px-36 lg:gap-20">
           {/* Left Side: Tech Quote (hidden on tablet and mobile) */}
-          <motion.div 
-          animate={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 200 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.3 }}
-          className="lg:w-1/2 mb-10 lg:mb-0 ">
+          <motion.div
+            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 200 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="lg:w-1/2 mb-10 lg:mb-0 "
+          >
             <h1 className="text-4xl font-extrabold text-center lg:text-left text-white/90 mb-6">
               <TypeAnimation
                 sequence={[

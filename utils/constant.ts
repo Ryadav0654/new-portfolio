@@ -24,3 +24,5 @@ export const navLinks = [
         path: "/contact"
     },
 ]
+
+export const Email_url = "https://api.emailjs.com/api/v1.0/email/send-form";
