@@ -72,7 +72,7 @@ export default function Home() {
               <div className="flex justify-center space-x-8 mt-8">
                 <Link
                   href={
-                    "https://drive.google.com/file/d/13HgevzXY_kAePz3nivkFZRlaEgPZYWSb/view?usp=sharing"
+                    "https://drive.google.com/file/d/1m3LuhAyCzsIiuCEYoHvt0-fxjrQ9lOi9/view?usp=sharing"
                   }
                   style={{
                     backgroundImage:
