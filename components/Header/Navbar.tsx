@@ -17,9 +17,9 @@ const Navbar = () => {
   }
 
   return (
-    <nav className=" fixed top-0 left-0 right-0 bg-transparent opacity-1 text-white z-50 backdrop-blur-sm">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 sticky top-0 ">
-        <div className="flex justify-between items-center py-5">
+    <nav className=" fixed top-0 left-0 right-0  opacity-1 text-white z-50 ">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-24 sticky top-0 mt-4">
+        <div className='flex justify-between items-center md:mx-auto px-4 sm:px-6 lg:px-6 py-3 rounded-full md:max-w-[70vw] border-b border-dark-800 bg-dark-900/50 backdrop-blur-lg'>
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/">
@@ -54,7 +54,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden sm:flex justify-center items-center  sm:space-x-4">
+          <div className="hidden sm:flex justify-center items-center sm:space-x-4">
             {
                 navLinks.map((link) => (
                     <Link key={link.name} href={link.path}>
@@ -62,14 +62,14 @@ const Navbar = () => {
                     </Link>
                 ))
             }
+          </div>
             <Link
                 href={"https://www.linkedin.com/in/yadavravindra536"}
                 style={{backgroundImage: "linear-gradient(90deg, #0072ff 0%, #00d4ff 100%"}}
-                className="hidden px-3 py-1 transition-color text-lg font-semibol  lg:flex text-white rounded-full transition duration-300"
+                className="hidden px-3 py-2 transition-color text-lg font-semibol  lg:flex text-white rounded-full transition duration-300"
               >
                 Hire Me
               </Link>
-          </div>
         </div>
       </div>
 

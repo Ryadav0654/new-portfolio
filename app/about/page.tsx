@@ -35,7 +35,7 @@ const About = () => {
           <p className="text-base lg:text-xl mb-2 leading-6">
             Hi, I&apos;m Ravindra Yadav, a passionate MERN stack developer with a
             keen interest in modern technologies. I&apos;m currently studying at IIIT
-            Bhopal and working as a Web Developer at Seequenze Technologies.
+            Bhopal.
           </p>
           <p className="text-base lg:text-xl mb-2 leading-7">
             I actively contribute to open-source programs like GSSoC and
