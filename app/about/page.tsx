@@ -17,7 +17,7 @@ const About = () => {
       <div className="absolute top-0 left-0 right-0 inset-0 w-full flex flex-col md:flex-row items-center justify-evenly gap-8 backdrop-blur-sm ">
         {/* Photo */}
         <Image
-          src={img} // Replace with your photo file path
+          src={img}
           alt="Ravindra Yadav"
           // width={200}
           // height={200}
@@ -53,7 +53,6 @@ const About = () => {
           </p>
         </motion.div>
       </div>
-      {/* </div> */}
     </section>
   );
 };
