@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import Card from "@/components/Card";
 import React, { useRef } from "react";
-import {projects } from "@/utils/projects";
+import { projects } from "@/utils/projects";
 const Project = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -20,12 +20,11 @@ const Project = () => {
   return (
     <section
       style={{
-        backgroundImage:
-          'url("/project-bg.jpg")',
+        backgroundImage: 'url("/project-bg.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="w-full h-screen flex justify-center items-center relative bg-opacity-75"
+      className="w-full h-screen flex justify-center items-center relative bg-opacity-75 "
     >
       {/* Scrollable Card Container */}
       <div
@@ -33,7 +32,10 @@ const Project = () => {
         className="w-[85vw] h-full px-10 flex  align-center gap-x-20 overflow-x-scroll scroll-smooth snap-x scrollbar-none"
       >
         {projects.map((project) => (
-          <div key={project.id} className="snap-center w-[80vw] h-[65vh] my-auto">
+          <div
+            key={project.id}
+            className="snap-center w-[80vw] h-[65vh] my-auto"
+          >
             <Card {...project} />
           </div>
         ))}

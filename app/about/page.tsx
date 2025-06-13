@@ -1,8 +1,64 @@
-"use client";
+// import React from "react";
+// import Image from "next/image";
+// import img from "@/public/Ravi_yadav.png";
+
+// const About = () => {
+//   return (
+//     <section
+//       style={{
+//         backgroundImage: 'url("/about_bg.jpg")',
+//         backgroundSize: "cover",
+//         backgroundPosition: "center",
+//       }}
+//       className="relative min-h-screen w-full bg-black text-white flex items-center justify-center px-6 md:px-12 lg:px-24 xl:px-36 bg-opacity-50"
+//     >
+//       <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-screen-xl gap-10 py-12">
+//         {/* 👤 Left: Profile Image */}
+//         <div className="w-full md:w-1/2 flex justify-center">
+//           <div className="w-72 h-72 md:w-[40rem] md:h-[40rem] overflow-hidden rounded-full shadow-2xl ring-1 ring-white/10">
+//             <Image
+//               src={img}
+//               alt="Ravindra Yadav"
+//               width={400}
+//               height={400}
+//               className="object-cover w-full h-full"
+//               priority
+//             />
+//           </div>
+//         </div>
+
+//         {/* ✍️ Right: Text Content */}
+//         <div className="w-full md:w-1/2 text-justify font-semibold space-y-4">
+//           <p className="text-base lg:text-xl leading-relaxed">
+//             Hi, I&apos;m <strong>Ravindra Yadav</strong>, a passionate MERN
+//             stack developer with a keen interest in modern technologies.
+//             I&apos;m currently studying at IIIT Bhopal.
+//           </p>
+//           <p className="text-base lg:text-xl leading-relaxed">
+//             I actively contribute to open-source programs like{" "}
+//             <strong>GSSoC</strong> and
+//             <strong> Hacktoberfest</strong>. During these events, I&apos;ve
+//             contributed to several exciting projects such as{" "}
+//             <strong>Papermark</strong>, <strong>CodeX100</strong>,{" "}
+//             <strong>NexMeet</strong>, and <strong>Frontend Mentor</strong>.
+//           </p>
+//           <p className="text-base lg:text-xl leading-relaxed">
+//             I&apos;m always looking for new opportunities to grow and learn.
+//             Feel free to reach out if you&apos;d like to collaborate or discuss
+//             any projects!
+//           </p>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default About;
+
 import React from "react";
 import Image from "next/image";
-import img from "@/public/resister-bg.png";
-import { motion } from "framer-motion";
+import img from "@/public/Ravi_yadav.png";
+
 const About = () => {
   return (
     <section
@@ -11,47 +67,42 @@ const About = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="min-h-screen w-full flex flex-col items-center justify-center bg-black relative"
+      className="relative min-h-screen w-full bg-black text-white flex items-center justify-center px-6 md:px-12 lg:px-24 xl:px-36"
     >
-      <div className="absolute top-0 left-0 right-0 inset-0 w-full flex flex-col md:flex-row items-center justify-evenly gap-8 backdrop-blur-sm ">
-        {/* Photo */}
-        <Image
-          src={img} // Replace with your photo file path
-          alt="Ravindra Yadav"
-          // width={200}
-          // height={200}
-          className=" object-cover "
-        />
+      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-screen-xl gap-10 py-12">
+        {/* 👤 Left: Profile Image */}
+        <div className="relative w-72 h-72 md:w-[550px] md:h-[650px] rounded-lg overflow-hidden shadow-2xl ring-4 ring-white/20 bg-white/10">
+          <Image
+            src={img}
+            alt="Ravindra Yadav"
+            fill
+            className="object-cover"
+            // priority
+          />
+        </div>
 
-        {/* Text Content */}
-        <motion.div
-          animate={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 400 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.3 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          className=" px-4 lg:p-10 text-justify font-semibold md:text-left max-w-lg text-white"
-        >
-          <p className="text-base lg:text-xl mb-2 leading-6">
-            Hi, I&apos;m Ravindra Yadav, a passionate MERN stack developer with a
-            keen interest in modern technologies. I&apos;m currently studying at IIIT
-            Bhopal.
+        {/* ✍️ Right: Text Content */}
+        <div className="w-full md:w-1/2 text-justify font-semibold space-y-4 md:px-20">
+          <p className="text-base lg:text-2xl leading-relaxed">
+            Hi, I&apos;m <strong>Ravindra Yadav</strong>, a passionate MERN
+            stack developer with a keen interest in modern technologies.
+            I&apos;m currently studying at IIIT Bhopal.
           </p>
-          <p className="text-base lg:text-xl mb-2 leading-7">
-            I actively contribute to open-source programs like GSSoC and
-            Hacktoberfest. During these events, I&apos;ve contributed to several
-            exciting projects such as <strong>Papermark</strong>,{" "}
-            <strong>CodeX100</strong>, <strong>NexMeet</strong>, and{" "}
-            <strong>Frontend Mentor</strong>.
+          <p className="text-base lg:text-xl leading-relaxed">
+            I actively contribute to open-source programs like{" "}
+            <strong>GSSoC</strong> and
+            <strong> Hacktoberfest</strong>. During these events, I&apos;ve
+            contributed to several exciting projects such as{" "}
+            <strong>Papermark</strong>, <strong>CodeX100</strong>,{" "}
+            <strong>NexMeet</strong>, and <strong>Frontend Mentor</strong>.
           </p>
-          <p className="text-base lg:text-xl leading-8">
-            I&apos;m always looking for new opportunities to grow and learn. Feel
-            free to reach out if you&apos;d like to collaborate or discuss any
-            projects!
+          <p className="text-base lg:text-xl leading-relaxed">
+            I&apos;m always looking for new opportunities to grow and learn.
+            Feel free to reach out if you&apos;d like to collaborate or discuss
+            any projects!
           </p>
-        </motion.div>
+        </div>
       </div>
-      {/* </div> */}
     </section>
   );
 };

@@ -44,7 +44,7 @@ const Contact = () => {
         }
       );
       // console.log("form response", res);
-      if(res.data === "OK"){
+      if (res.data === "OK") {
         toast.success("🎉 message sent successfully!");
         // toast.success("🎉 Thanks for contacting me!");
       }
